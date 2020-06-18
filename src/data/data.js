@@ -1,11 +1,11 @@
 module.exports = [
-    'Ben',
-    'Corey',
-    'Chase',
-    'Daniel',
-    'Lespy',
-    'Gibbons',
-    'Jason'
+    ' Ben',
+    ' Corey',
+    ' Chase',
+    ' Daniel',
+    ' Lespy',
+    ' Gibbons',
+    ' Jason'
 ]
 
 // immunity:  

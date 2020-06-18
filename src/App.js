@@ -7,41 +7,56 @@ class App extends Component {
     super();
     this.state = {
       students: studentsArray,
-      display: "Ben', 'Corey', 'Chase', 'Daniel', 'Lespy', 'Gibbons', 'Jason",
-      class: true
+      class: true,
     };
   }
 
   selectRandomNum = () => {
     const { students } = this.state;
+
     const min = 0; // 0 index
     const max = students.length;
 
-    //Can equal min, cannot equal max
+    // Can equal min, cannot equal max
     let randomNum = Math.random() * (max - min) + min;
 
-    // round down so we can select the index range of the studentsArray
+    // Round down so we can select the index range of the studentsArray
     let rounded = Math.floor(randomNum);
-    
-    this.selectRandomName(rounded)
-    
+
+    this.selectRandomName(rounded);
   };
 
   selectRandomName = (randNum) => {
     this.setState({
-      display: this.state.students[randNum],
+      students: [this.state.students[randNum]],
+    });
+  };
+
+  resetStudents = () => {
+    this.setState({
+      students: studentsArray,
     });
   };
 
   render() {
-    let text_class = this.state.class ? "fadeOut" : "Name"
+    const { students } = this.state;
+
+    const displayArray = students.map((student) => {
+      return `${student}`;
+    });
+
+    // Reset Button will show if one student is displaying
+    const button =
+      students.length > 1 ? (
+        <button className = 'All-Students' onClick={() => this.selectRandomNum()}>Randomizer</button>
+      ) : (
+        <button className = 'One-Student' onClick={() => this.resetStudents()}>Reset</button>
+      );
 
     return (
       <div className="App">
-        <p className={text_class}>{`[ '${this.state.display}' ]`}</p>
-        <div>
-          <button onClick={() => this.selectRandomNum()}>RANDOMIZER</button>
-        </div>
+        <p>{`[ ${displayArray} ]`}</p>
+        <div>{button}</div>
       </div>
     );
   }

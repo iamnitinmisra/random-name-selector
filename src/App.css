@@ -2,76 +2,28 @@
   padding: 10vh 0 0 0;
   text-align: center;
   background-color: black;
-  height: 90vh;
+  height: 100vh;
   width: 100vw;
   font-size: 8em;
   color: blueviolet;
 }
 
 button {
-  margin: 20vh;
+  border-radius: 5px;
   padding: 10px;
-  background-color: black;
   border: solid white 1px;
+  background-color: black;
   color: white;
-  /* border-radius: 0; */
 }
 
-button:hover {
-  padding: 10px;
-  background-color: white;
+.All-Students:hover {
+  background-color: rgb(105, 145, 26);
   border: solid black 1px;
   color: black;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .Name {
-    /* animation: fadeIn ease 5s; */
-
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-ms-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.One-Student:hover {
+  background-color: red;
+  border: solid black 1px;
 }
